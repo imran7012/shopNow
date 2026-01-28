@@ -161,8 +161,6 @@ All components are containerized using Docker and deployed into Kubernetes.
   Role mapped to Kubernetes via aws-auth ConfigMap
 
 
-
-
 ---
 
 ## Jenkins CI/CD Pipeline
@@ -199,6 +197,33 @@ All components are containerized using Docker and deployed into Kubernetes.
 
 
 
+---
+
+## Final outcome after Deployment:
+
+
+<img width="940" height="496" alt="image" src="https://github.com/user-attachments/assets/9da269ab-0970-4d61-bec4-e002cde51eaa" />
+
+
+---
+
+<img width="940" height="270" alt="image" src="https://github.com/user-attachments/assets/16c5c573-cd9b-4be2-afd3-372b62dbdb31" />
+
+---
+
+
+<img width="940" height="471" alt="image" src="https://github.com/user-attachments/assets/878d5bf6-bc74-4103-ad98-a9674d12c661" />
+
+
+---
+
+<img width="1306" height="997" alt="image" src="https://github.com/user-attachments/assets/fd00a699-a823-4060-bfe3-b044b5e7b3bf" />
+
+
+
+
+
+---
 
 
 
