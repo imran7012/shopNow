@@ -122,3 +122,55 @@ All components are containerized using Docker and deployed into Kubernetes.
   
   helm upgrade --install shopnow ./shopnow -n shopnow
 
+  ## installation of aws loadbalancer for ingress service:
+     
+     helm repo add eks https://aws.github.io/eks-charts
+     helm repo update
+
+     helm install aws-load-balancer-controller eks/aws-load-balancer-controller \
+     -n kube-system \
+     --set clusterName=e-commerce \
+     --set serviceAccount.create=false \
+     --set serviceAccount.name=aws-load-balancer-controller \
+     --set region=ap-south-1 \
+     --set v=2
+
+     kubectl get pods -n kube-system | grep load-balancer
+  
+ <img width="940" height="286" alt="image" src="https://github.com/user-attachments/assets/f462c96d-12ab-4f7e-a5a3-58c02f065248" />
+
+---
+
+## Jenkins CI/CD Pipeline
+
+   A declarative Jenkins pipeline was implemented to automate the entire build and deployment workflow.
+
+## Pipeline Stages
+
+   ## Checkout
+   
+     Pulls code from GitHub (test branch)
+   
+   ## Build Docker Images
+   
+     Builds frontend, backend, and admin images
+   
+   ## Push to DockerHub
+   
+     Versioned images pushed using Jenkins credentials
+   
+   ## Deploy to Kubernetes
+   
+      Uses Helm to upgrade or install the application on EKS
+   
+   ## Jenkinsfile Highlights
+   
+      1.Uses DockerHub credentials securely
+      
+      2.Uses IAM Role-based authentication for AWS (no hardcoded AWS keys)
+      
+      3.Automatically updates image tags during deployment
+
+
+
+
