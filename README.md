@@ -140,6 +140,30 @@ All components are containerized using Docker and deployed into Kubernetes.
  <img width="940" height="286" alt="image" src="https://github.com/user-attachments/assets/f462c96d-12ab-4f7e-a5a3-58c02f065248" />
 
 ---
+## Jenkins Server Setup
+
+   The Jenkins server was configured with the following tools:
+   
+   Git
+   
+   Docker
+   
+   AWS CLI
+   
+   kubectl
+   
+   Helm
+
+## Authentication to AWS EKS is handled using:
+
+  IAM Role attached to Jenkins EC2
+  
+  Role mapped to Kubernetes via aws-auth ConfigMap
+
+
+
+
+---
 
 ## Jenkins CI/CD Pipeline
 
@@ -170,6 +194,10 @@ All components are containerized using Docker and deployed into Kubernetes.
       2.Uses IAM Role-based authentication for AWS (no hardcoded AWS keys)
       
       3.Automatically updates image tags during deployment
+
+<img width="1896" height="955" alt="image" src="https://github.com/user-attachments/assets/486e904b-d9d6-45cf-9861-e884bbaeafc1" />
+
+
 
 
 
