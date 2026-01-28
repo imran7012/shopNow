@@ -196,6 +196,9 @@ All components are containerized using Docker and deployed into Kubernetes.
 <img width="1896" height="955" alt="image" src="https://github.com/user-attachments/assets/486e904b-d9d6-45cf-9861-e884bbaeafc1" />
 
 
+http://65.1.149.130:8080/job/shop/8/console
+
+
 
 ---
 
@@ -224,6 +227,7 @@ All components are containerized using Docker and deployed into Kubernetes.
 
 
 ---
+
 
 
 
